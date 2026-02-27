@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head><meta charset="UTF-8"/><title>VoteApp — About</title></head>
+<body>
+<section class="card" style="max-width:560px;margin:auto;">
+	<div class="hero" style="padding-bottom:10px;">
+		<span class="hero-icon">&#128681;</span>
+		<h1>About VoteApp</h1>
+		<p class="subtitle">A transparent, secure, and easy-to-use digital voting platform.</p>
+	</div>
+
+	<div th:if="${session.msg}" class="alert alert-danger">
+		<span>&#9888;</span>
+		<span th:text="${session.msg}"></span>
+		<div th:text="${@sessionUtilityBean.removeVerificationMessageFromSession()}"></div>
+	</div>
+
+	<div style="color:var(--text-muted);font-size:.93rem;line-height:1.8;margin-top:8px;">
+		<p>VoteApp lets registered users cast their vote for one of the available candidates. Each user can vote only once. The admin panel provides real-time vote tallies for all candidates.</p>
+		<br>
+		<p>Built with <strong style="color:var(--text);">Spring Boot</strong> + <strong style="color:var(--text);">Thymeleaf</strong>.</p>
+	</div>
+</section>
+</body>
+</html>

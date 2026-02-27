@@ -1,0 +1,18 @@
+/* Minimal layout helpers — all visual styling lives in style.css */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.layout {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.col-main, .col-complementary { flex: 1; min-width: 260px; }
+
+table { border-collapse: collapse; width: 100%; }
+tr { line-height: 1.6; }

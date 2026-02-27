@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head><meta charset="UTF-8"/><title>VoteApp — Home</title></head>
+<body>
+<section class="card" style="max-width:520px;margin:auto;">
+	<div class="hero">
+
+		<h1>Voting Application</h1>
+		<p class="subtitle">A secure and transparent platform for casting your vote.<br>Register, sign in, and make your voice heard.</p>
+	</div>
+
+	<div th:if="${session.msg}">
+		<div class="alert alert-danger">
+			<span>&#9888;</span>
+			<span th:text="${session.msg}"></span>
+		</div>
+		<th:block th:text="${#session.removeAttribute('msg')}"></th:block>
+	</div>
+
+	<div style="display:flex;gap:12px;margin-top:8px;">
+		<a th:href="@{/signin}" style="flex:1;text-align:center;padding:13px;background:var(--emerald);color:#fff;border-radius:9px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s;">Sign In</a>
+		<a th:href="@{/register}" style="flex:1;text-align:center;padding:13px;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:9px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s;">Register</a>
+	</div>
+</section>
+</body>
+</html>
