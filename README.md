@@ -84,10 +84,6 @@ spring.datasource.password=your_password
 
 ---
 
-
-
----
-
 ## ▶️ How to Run
 
 1. Clone the repository:
