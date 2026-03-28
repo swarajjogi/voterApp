@@ -87,7 +87,7 @@ spring.datasource.password=your_password
 ## ▶️ How to Run
 
 1. Clone the repository:
-git clone https://github.com/your-username/voting-app.git
+git clone https://github.com/swarajjogi/voting-app.git
 
 
 2. Navigate into project:
