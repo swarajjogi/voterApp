@@ -77,7 +77,7 @@ Controller → Service → Repository → Database
 ## ⚙️ Configuration
 
 Update your `application.properties` with your database credentials:
-spring.datasource.url=jdbc:mysql://localhost:3306/voterDb
+spring.datasource.url=jdbc:mysql://localhost**
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 
